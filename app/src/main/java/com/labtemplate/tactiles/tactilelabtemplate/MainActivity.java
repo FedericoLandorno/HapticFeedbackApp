@@ -79,11 +79,14 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            //EditText,Button, CheckBox, ToggleButton, RadioButton, Spinner, TimePicker, and DatePicker
             HEditText hEditText = new HEditText();
             HButton hButton = new HButton();
             HCheckBox hCheckBox = new HCheckBox();
             HToggleButton hToggleButton = new HToggleButton();
+            HRadioButton hRadioButton = new HRadioButton();
+            HSpinner hSpinner = new HSpinner();
+            HTimePicker hTimePicker = new HTimePicker();
+            HDatePicker hDatePicker = new HDatePicker();
 
             switch (position) {
                 case 0 :
@@ -94,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
                     return hCheckBox.newInstance(position + 1);
                 case 3 :
                     return hToggleButton.newInstance(position + 1);
+                case 4 :
+                    return hRadioButton.newInstance(position + 1);
+                case 5 :
+                    return hSpinner.newInstance(position + 1);
+                case 6 :
+                    return hTimePicker.newInstance(position + 1);
+                case 7:
+                    return hDatePicker.newInstance(position + 1);
+
             }
 
             return hEditText.newInstance(position + 1);
@@ -102,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 4 total pages.
-            return 4;
+            return 8;
         }
     }
 }
