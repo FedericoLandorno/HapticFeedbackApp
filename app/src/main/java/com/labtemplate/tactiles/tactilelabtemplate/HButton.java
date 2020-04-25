@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class view2 extends Fragment {
+public class HButton extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -20,15 +20,15 @@ public class view2 extends Fragment {
 
     Vibrator vibr;
 
-    public view2() {
+    public HButton() {
     }
 
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static view2 newInstance(int sectionNumber) {
-        view2 fragment = new view2();
+    public static HButton newInstance(int sectionNumber) {
+        HButton fragment = new HButton();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -39,7 +39,7 @@ public class view2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.view2, container, false);
+        View rootView = inflater.inflate(R.layout.hbutton, container, false);
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         //Create a button

@@ -79,23 +79,24 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            view1 View1 = new view1();
-            view2 View2 = new view2();
-            view3 View3 = new view3();
-            view4 View4 = new view4();
+            //EditText,Button, CheckBox, ToggleButton, RadioButton, Spinner, TimePicker, and DatePicker
+            HEditText hEditText = new HEditText();
+            HButton hButton = new HButton();
+            HCheckBox hCheckBox = new HCheckBox();
+            HToggleButton hToggleButton = new HToggleButton();
 
             switch (position) {
                 case 0 :
-                    return View1.newInstance(position + 1);
+                    return hEditText.newInstance(position + 1);
                 case 1 :
-                    return View2.newInstance(position + 1);
+                    return hButton.newInstance(position + 1);
                 case 2 :
-                    return View3.newInstance(position + 1);
+                    return hCheckBox.newInstance(position + 1);
                 case 3 :
-                    return View4.newInstance(position + 1);
+                    return hToggleButton.newInstance(position + 1);
             }
 
-            return View1.newInstance(position + 1);
+            return hEditText.newInstance(position + 1);
         }
 
         @Override

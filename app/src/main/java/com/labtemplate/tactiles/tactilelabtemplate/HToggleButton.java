@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.graphics.Color;
 
-public class view4 extends Fragment {
+public class HToggleButton extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -30,15 +30,15 @@ public class view4 extends Fragment {
     Button playButton, recordButton;
     long[] hapticSignal = new long[hapticSignalMax];
 
-    public view4() {
+    public HToggleButton() {
     }
 
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static view4 newInstance(int sectionNumber) {
-        view4 fragment = new view4();
+    public static HToggleButton newInstance(int sectionNumber) {
+        HToggleButton fragment = new HToggleButton();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -49,7 +49,7 @@ public class view4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.view4, container, false);
+        View rootView = inflater.inflate(R.layout.htogglebutton, container, false);
         textView = (TextView) rootView.findViewById(R.id.textView);
         textView.setText("Push the record button, and then the empty area\nbeneath to record a tactile pattern.");
 

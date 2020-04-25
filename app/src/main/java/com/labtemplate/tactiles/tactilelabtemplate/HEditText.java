@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class view1 extends Fragment {
+public class HEditText extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -18,15 +18,15 @@ public class view1 extends Fragment {
 
     TextView textView;
 
-    public view1() {
+    public HEditText() {
     }
 
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static view1 newInstance(int sectionNumber) {
-        view1 fragment = new view1();
+    public static HEditText newInstance(int sectionNumber) {
+        HEditText fragment = new HEditText();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -37,7 +37,7 @@ public class view1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.view1, container, false);
+        View rootView = inflater.inflate(R.layout.hedittext, container, false);
         textView = (TextView) rootView.findViewById(R.id.section_label);
         textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
