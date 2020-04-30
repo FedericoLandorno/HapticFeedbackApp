@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class HRadioButton  extends Fragment {
+public class HSlider extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -18,15 +18,15 @@ public class HRadioButton  extends Fragment {
 
     TextView textView;
 
-    public HRadioButton() {
+    public HSlider() {
     }
 
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static HRadioButton newInstance(int sectionNumber) {
-        HRadioButton fragment = new HRadioButton();
+    public static HSlider newInstance(int sectionNumber) {
+        HSlider fragment = new HSlider();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -37,7 +37,7 @@ public class HRadioButton  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.hedittext, container, false);
+        View rootView = inflater.inflate(R.layout.hslider, container, false);
         textView = (TextView) rootView.findViewById(R.id.section_label);
         textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
@@ -61,3 +61,5 @@ public class HRadioButton  extends Fragment {
         return rootView;
     }
 }
+
+

@@ -35,7 +35,7 @@ public class HSpinner  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.hedittext, container, false);
+        View rootView = inflater.inflate(R.layout.hslider, container, false);
         textView = (TextView) rootView.findViewById(R.id.section_label);
         textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
