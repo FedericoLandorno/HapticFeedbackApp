@@ -26,7 +26,6 @@ public class HTimePicker  extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    TextView textView;
     Vibrator vibr;
 
     public HTimePicker() {
@@ -49,8 +48,6 @@ public class HTimePicker  extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.hslider, container, false);
-        textView = (TextView) rootView.findViewById(R.id.htimepicker_textView);
-        textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
