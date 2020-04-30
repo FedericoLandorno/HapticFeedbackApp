@@ -7,7 +7,7 @@
     tools:context="com.labtemplate.tactiles.tactilelabtemplate.MainActivity$PlaceholderFragment">
 
     <TextView
-        android:id="@+id/section_label"
+        android:id="@+id/htimepicker_textView"
         android:layout_width="211dp"
         android:layout_height="41dp"
         android:layout_marginLeft="84dp"
@@ -17,13 +17,15 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
-    <SeekBar
-        android:id="@+id/view1_seekBar"
-        android:layout_width="251dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="67dp"
+    <Button
+        android:id="@+id/timepicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="73dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/section_label" />
+        android:layout_marginEnd="160dp"
+        android:onClick="showTimePickerDialog"
+        android:text="Pick time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/htimepicker_textView" />
 
 </android.support.constraint.ConstraintLayout>
