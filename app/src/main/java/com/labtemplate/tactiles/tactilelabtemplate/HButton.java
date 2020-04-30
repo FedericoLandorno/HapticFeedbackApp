@@ -42,38 +42,50 @@ public class HButton extends Fragment {
         View rootView = inflater.inflate(R.layout.hbutton, container, false);
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
-        //Create a button
-        Button button = rootView.findViewById(R.id.view2_button);
-        button.setOnClickListener(new View.OnClickListener() {
+        //Create a buttons
+        Button button1 = rootView.findViewById(R.id.view2_button1);
+        Button button2 = rootView.findViewById(R.id.view2_button2);
+        Button button3 = rootView.findViewById(R.id.view2_button3);
+        Button button4 = rootView.findViewById(R.id.view2_button4);
+
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //This code runs when the button is clicked
-
+                //COMMAND: DO NOTHING
             }
         });
 
-        //Create a seekbar
-        SeekBar seekBar = rootView.findViewById(R.id.view2_seekBar);
-        seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-                //This function will be called whenever the slider is moved to a new value.
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                //This function will be called whenever the user lets go of the bar.
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                //This function will be called whenever the user starts touching the bar.
+            public void onClick(View view) {
+                //This code runs when the button is clicked
+                //COMMAND: PATTERN 1
+                long[] pattern = {0, 100, 50, 250, 50, 100};
+                vibr.vibrate(pattern, -1);
             }
         });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //This code runs when the button is clicked
+                //COMMAND: PATTERN 2
+                long[] pattern = {0, 100, 50, 250, 50, 100};
+                vibr.vibrate(pattern, -1);
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //This code runs when the button is clicked
+                //COMMAND: PATTERN 3
+                long[] pattern = {0, 100, 50, 250, 50, 100};
+                vibr.vibrate(pattern, -1);
+            }
+        });
+
         return rootView;
     }
 }
