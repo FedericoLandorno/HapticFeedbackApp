@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             HCheckBox hCheckBox = new HCheckBox();
             HToggleButton hToggleButton = new HToggleButton();
             HSpinner hSpinner = new HSpinner();
-            HTimePicker hTimePicker = new HTimePicker();
+            HRatingBar hRatingBar = new HRatingBar();
 
             switch (position) {
                 case 0 :
@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
                     return hToggleButton.newInstance(position + 1);
                 case 4 :
                     return hSpinner.newInstance(position + 1);
-                case 5 :
-                    return hTimePicker.newInstance(position + 1);
+                case 5:
+                    return hRatingBar.newInstance(position + 1);
 
             }
 
