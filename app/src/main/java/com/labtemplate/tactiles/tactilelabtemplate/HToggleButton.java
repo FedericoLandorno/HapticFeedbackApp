@@ -82,8 +82,6 @@ public class HToggleButton extends Fragment {
                     vibr.vibrate(pattern, -1);
                 } else {
                     // The toggle is disabled
-                    long[] pattern = {100, 0};
-                    vibr.vibrate(pattern, -1);
                 }
             }
         });
@@ -95,8 +93,6 @@ public class HToggleButton extends Fragment {
                     vibr.vibrate(pattern, -1);
                 } else {
                     // The toggle is disabled
-                    long[] pattern = {100, 0};
-                    vibr.vibrate(pattern, -1);
                 }
             }
         });
@@ -108,8 +104,6 @@ public class HToggleButton extends Fragment {
                     vibr.vibrate(pattern, -1);
                 } else {
                     // The toggle is disabled
-                    long[] pattern = {100, 0};
-                    vibr.vibrate(pattern, -1);
                 }
             }
         });
