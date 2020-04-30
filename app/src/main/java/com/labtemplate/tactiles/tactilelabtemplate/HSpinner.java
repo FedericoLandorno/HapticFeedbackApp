@@ -35,26 +35,8 @@ public class HSpinner  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.hslider, container, false);
-        textView = (TextView) rootView.findViewById(R.id.section_label);
-        textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+        View rootView = inflater.inflate(R.layout.hspinner, container, false);
 
-
-        SeekBar bar = rootView.findViewById(R.id.view1_seekBar);
-
-        bar.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
-                //This function is called whenever the slider is moved
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar){
-            }
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar){
-            }
-        });
 
         return rootView;
     }
