@@ -47,7 +47,7 @@ public class HTimePicker  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.hslider, container, false);
+        View rootView = inflater.inflate(R.layout.htimepicker, container, false);
 
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -87,9 +87,9 @@ public class HTimePicker  extends Fragment {
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             // Do something with the time chosen by the user
-            if (button.getId() == R.id.timepicker1) vibr.vibrate(pattern1, -1);
-            else if (button.getId() == R.id.timepicker1) vibr.vibrate(pattern2, -1);
-            else if (button.getId() == R.id.timepicker1) vibr.vibrate(pattern3, -1);
+            if (button.getId() == R.id.timepicker2) vibr.vibrate(pattern1, -1);
+            else if (button.getId() == R.id.timepicker3) vibr.vibrate(pattern2, -1);
+            else if (button.getId() == R.id.timepicker4) vibr.vibrate(pattern3, -1);
         }
     }
 }
