@@ -2,6 +2,7 @@ package com.labtemplate.tactiles.tactilelabtemplate;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -42,76 +43,45 @@ public class HCheckBox extends Fragment {
 
         View rootView = inflater.inflate(R.layout.hcheckbox, container, false);
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        initAudioAttributes();
 
-        //Create a button
-        Button button1 = rootView.findViewById(R.id.view3_button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        //Create checkboxes
+        Button checkbox1 = rootView.findViewById(R.id.checkbox1);
+        Button checkbox2 = rootView.findViewById(R.id.checkbox2);
+        Button checkbox3 = rootView.findViewById(R.id.checkbox3);
+        Button checkbox4 = rootView.findViewById(R.id.checkbox4);
+
+        checkbox1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //This code runs when the first button is clicked
-
+                //This code runs when the first checkbox is clicked
+                //CONTROL WITHOUT VIBRATION
             }
         });
-
-        //Create a button
-        Button button2 = rootView.findViewById(R.id.view3_button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        checkbox2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //This code runs when the second button is clicked
-
+                //This code runs when the second checkbox is clicked
+                long[] pattern = {0, 100};
+                vibr.vibrate(pattern, -1);
             }
         });
-
-        //Create a button
-        Button button3 = rootView.findViewById(R.id.view3_button3);
-        button3.setOnClickListener(new View.OnClickListener() {
+        checkbox3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //This code runs when the third button is clicked
-
+                //This code runs when the third checkbox is clicked
+                long[] pattern = {0, 100};
+                vibr.vibrate(pattern, -1);
             }
         });
-
-        //Create a button
-        Button button4 = rootView.findViewById(R.id.view3_button4);
-        button4.setOnClickListener(new View.OnClickListener() {
+        checkbox4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //This code runs when the fourth button is clicked
-
+                //This code runs when the fourth checkbox is clicked
+                long[] pattern = {0, 100};
+                vibr.vibrate(pattern, -1);
             }
         });
 
         return rootView;
-    }
-
-    private void initAudioAttributes(){
-
-        //Create Audio Attributes
-        aAttributes[0] = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_MEDIA)
-                .setContentType(AudioAttributes.CONTENT_TYPE_UNKNOWN)
-                .build();
-
-        aAttributes[1] = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_GAME)
-                .setContentType(AudioAttributes.CONTENT_TYPE_UNKNOWN)
-                .build();
-
-        aAttributes[2] = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_NOTIFICATION)
-                .setContentType(AudioAttributes.CONTENT_TYPE_UNKNOWN)
-                .build();
-
-        aAttributes[3] = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_NOTIFICATION_RINGTONE)
-                .setContentType(AudioAttributes.CONTENT_TYPE_UNKNOWN)
-                .build();
     }
 }
