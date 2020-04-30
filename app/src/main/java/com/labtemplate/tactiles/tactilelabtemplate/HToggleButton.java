@@ -9,7 +9,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.graphics.Color;
 
@@ -50,72 +52,68 @@ public class HToggleButton extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.htogglebutton, container, false);
-        textView = (TextView) rootView.findViewById(R.id.textView);
-        textView.setText("Push the record button, and then the empty area\nbeneath to record a tactile pattern.");
+        textView = (TextView) rootView.findViewById(R.id.hswitch_textView);
+        textView.setText("Switch");
 
-        //Initiate SeekBar
-        ImageButton image = rootView.findViewById(R.id.view4_image);
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
-        //Hide the slider elements of the SeekBar
-        image.setBackgroundColor(Color.argb(255, 220, 210, 255));
-        image.setOnTouchListener(new View.OnTouchListener()
-        {
+        //Create switches
+        Switch switch1 = rootView.findViewById(R.id.switch1);
+        Switch switch2 = rootView.findViewById(R.id.switch2);
+        Switch switch3 = rootView.findViewById(R.id.switch3);
+        Switch switch4 = rootView.findViewById(R.id.switch4);
 
-            @Override
-            public boolean onTouch(View arg0, MotionEvent arg1) {
-
-                //This function is called whenever a touch event has been registered on the element.
-
-                int eventAction = arg1.getAction();
-
-                //If the event is a "push down" or "let go":
-                if (eventAction == MotionEvent.ACTION_DOWN || eventAction == MotionEvent.ACTION_UP) {
-
-
-
-                    prevTime = System.currentTimeMillis();
-                }
-
-                return true;
-            }
-
-        });
-
-        //Create the play button
-        playButton = rootView.findViewById(R.id.play_button);
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                //This code runs when the first button is clicked
-                vibr.vibrate(hapticSignal, -1);
-            }
-        });
-
-        //Create the record button
-        recordButton = rootView.findViewById(R.id.record_button);
-        recordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(isRecording == false){
-
-                    //Reset saved haptic signal here
-
-
-                    recordButton.setText("Stop");
-                    isRecording = true;
-
-                    prevTime = System.currentTimeMillis();
-                }
-                else if(isRecording == true){
-
-                    recordButton.setText("Record");
-                    isRecording = false;
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    //CONTROL NO VIBRATION
+                } else {
+                    // The toggle is disabled
+                    //CONTROL NO VIBRATION
                 }
             }
         });
+        switch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                } else {
+                    // The toggle is disabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                }
+            }
+        });
+        switch3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                } else {
+                    // The toggle is disabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                }
+            }
+        });
+        switch4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                } else {
+                    // The toggle is disabled
+                    long[] pattern = {100, 0};
+                    vibr.vibrate(pattern, -1);
+                }
+            }
+        });
+
         return rootView;
     }
 }
