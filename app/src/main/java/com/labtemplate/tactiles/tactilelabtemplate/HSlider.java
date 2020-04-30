@@ -1,6 +1,8 @@
 package com.labtemplate.tactiles.tactilelabtemplate;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ public class HSlider extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     TextView textView;
+    Vibrator mVibrator;
 
     public HSlider() {
     }
@@ -38,17 +41,67 @@ public class HSlider extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.hslider, container, false);
+        mVibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         textView = (TextView) rootView.findViewById(R.id.section_label);
         textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
 
-        SeekBar bar = rootView.findViewById(R.id.view1_seekBar);
+        SeekBar bar1 = rootView.findViewById(R.id.view1_seekBar1);
+        SeekBar bar2 = rootView.findViewById(R.id.view1_seekBar2);
+        SeekBar bar3 = rootView.findViewById(R.id.view1_seekBar3);
+        SeekBar bar4 = rootView.findViewById(R.id.view1_seekBar4);
 
-        bar.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+        bar1.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
                 //This function is called whenever the slider is moved
+                //CONTROL: NO VIBRATION
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar){
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar){
+            }
+        });
+
+        bar2.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+                //This function is called whenever the slider is moved
+                mVibrator.vibrate(progress * 10);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar){
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar){
+            }
+        });
+
+        bar3.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+                //This function is called whenever the slider is moved
+                mVibrator.vibrate(progress * 10);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar){
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar){
+            }
+        });
+
+        bar4.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+                //This function is called whenever the slider is moved
+                mVibrator.vibrate(progress * 10);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){

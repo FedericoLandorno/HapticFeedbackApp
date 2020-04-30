@@ -10,19 +10,48 @@
         android:id="@+id/section_label"
         android:layout_width="211dp"
         android:layout_height="41dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="132dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <SeekBar
-        android:id="@+id/view1_seekBar"
+        android:id="@+id/view1_seekBar1"
         android:layout_width="251dp"
         android:layout_height="37dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section_label" />
+
+    <SeekBar
+        android:id="@+id/view1_seekBar2"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section_label" />
+
+    <SeekBar
+        android:id="@+id/view1_seekBar3"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section_label" />
+
+    <SeekBar
+        android:id="@+id/view1_seekBar4"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="392dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/section_label" />
 
