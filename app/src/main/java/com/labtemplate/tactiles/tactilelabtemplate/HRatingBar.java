@@ -19,7 +19,6 @@ public class HRatingBar extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    TextView textView;
     Vibrator mVibrator;
 
     public HRatingBar() {
@@ -43,8 +42,6 @@ public class HRatingBar extends Fragment {
 
         View rootView = inflater.inflate(R.layout.hratingbar, container, false);
         mVibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        textView = (TextView) rootView.findViewById(R.id.hsratingbar_textView);
-        textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
         //Create rating bars
         RatingBar star1 = rootView.findViewById(R.id.ratingBar1);

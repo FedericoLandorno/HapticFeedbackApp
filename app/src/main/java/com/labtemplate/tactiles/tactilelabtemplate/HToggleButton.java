@@ -22,15 +22,7 @@ public class HToggleButton extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    //Public variables
-    int i;
-    static int hapticSignalMax = 20;
-    long prevTime;
     Vibrator vibr;
-    TextView textView;
-    boolean isRecording = false;
-    Button playButton, recordButton;
-    long[] hapticSignal = new long[hapticSignalMax];
 
     public HToggleButton() {
     }
@@ -52,8 +44,6 @@ public class HToggleButton extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.htogglebutton, container, false);
-        textView = (TextView) rootView.findViewById(R.id.hswitch_textView);
-        textView.setText("Switch");
 
         vibr = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -78,7 +68,7 @@ public class HToggleButton extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    long[] pattern = {100, 0};
+                    long[] pattern = {0, 100};
                     vibr.vibrate(pattern, -1);
                 } else {
                     // The toggle is disabled

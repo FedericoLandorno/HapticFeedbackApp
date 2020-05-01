@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //set content view AFTER ABOVE sequence (to avoid crash)// finally change the color
         setContentView(R.layout.activity_main);
 
         // Create the adapter that will return a fragment for each of the three
@@ -79,27 +86,32 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            Intro intro = new Intro();
             HSlider hSlider = new HSlider();
             HButton hButton = new HButton();
             HCheckBox hCheckBox = new HCheckBox();
             HToggleButton hToggleButton = new HToggleButton();
             HSpinner hSpinner = new HSpinner();
             HRatingBar hRatingBar = new HRatingBar();
+            End end = new End();
 
             switch (position) {
-                case 0 :
-                    return hSlider.newInstance(position + 1);
+                case 0:
+                    return intro.newInstance(position + 1);
                 case 1 :
                     return hButton.newInstance(position + 1);
                 case 2 :
-                    return hCheckBox.newInstance(position + 1);
+                    return hSlider.newInstance(position + 1);
                 case 3 :
-                    return hToggleButton.newInstance(position + 1);
+                    return hCheckBox.newInstance(position + 1);
                 case 4 :
+                    return hToggleButton.newInstance(position + 1);
+                case 5 :
                     return hSpinner.newInstance(position + 1);
-                case 5:
+                case 6:
                     return hRatingBar.newInstance(position + 1);
-
+                case 7:
+                    return end.newInstance(position + 1);
             }
 
             return hSlider.newInstance(position + 1);
@@ -108,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show total pages.
-            return 6;
+            return 8;
         }
     }
 }

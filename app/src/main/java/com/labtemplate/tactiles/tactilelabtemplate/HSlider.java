@@ -18,7 +18,6 @@ public class HSlider extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    TextView textView;
     Vibrator mVibrator;
 
     public HSlider() {
@@ -42,8 +41,6 @@ public class HSlider extends Fragment {
 
         View rootView = inflater.inflate(R.layout.hslider, container, false);
         mVibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        textView = (TextView) rootView.findViewById(R.id.section_label);
-        textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
 
         SeekBar bar1 = rootView.findViewById(R.id.view1_seekBar1);
