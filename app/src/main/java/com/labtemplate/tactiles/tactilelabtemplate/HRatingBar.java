@@ -58,22 +58,19 @@ public class HRatingBar extends Fragment {
         star2.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
-                long[] pattern = {0, (long)rating*10};
-                mVibrator.vibrate(pattern, -1);
+                mVibrator.vibrate((long)rating*10);
             }
         });
         star3.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
-                long[] pattern = {0, (long)rating*10};
-                mVibrator.vibrate(pattern, -1);
+                mVibrator.vibrate(100);
             }
         });
         star4.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
-                long[] pattern = {0, (long)rating*10};
-                mVibrator.vibrate(pattern, -1);
+                mVibrator.vibrate((long)rating*40);
             }
         });
 

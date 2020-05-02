@@ -68,10 +68,10 @@ public class HToggleButton extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    long[] pattern = {0, 100};
-                    vibr.vibrate(pattern, -1);
+                    vibr.vibrate(50);
                 } else {
                     // The toggle is disabled
+                    vibr.vibrate(50);
                 }
             }
         });
@@ -79,10 +79,10 @@ public class HToggleButton extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    long[] pattern = {100, 0};
-                    vibr.vibrate(pattern, -1);
+                    vibr.vibrate(50);
                 } else {
                     // The toggle is disabled
+                    vibr.vibrate(10);
                 }
             }
         });
@@ -90,10 +90,10 @@ public class HToggleButton extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    long[] pattern = {100, 0};
-                    vibr.vibrate(pattern, -1);
+                    vibr.vibrate(10);
                 } else {
                     // The toggle is disabled
+                    vibr.vibrate(50);
                 }
             }
         });

@@ -38,7 +38,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar1" />
 
     <SeekBar
         android:id="@+id/view1_seekBar3"
@@ -47,7 +47,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar1" />
+        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar2" />
 
     <SeekBar
         android:id="@+id/view1_seekBar4"
@@ -56,6 +56,6 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar2" />
+        app:layout_constraintTop_toBottomOf="@+id/view1_seekBar3" />
 
 </android.support.constraint.ConstraintLayout>

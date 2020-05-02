@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -56,33 +57,42 @@ public class HButton extends Fragment {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        button2.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                //This code runs when the button is clicked
-                //COMMAND: PATTERN 1
-                long[] pattern = {0, 100, 50, 250, 50, 100};
-                vibr.vibrate(pattern, -1);
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    vibr.vibrate(10);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    vibr.vibrate(10);
+                }
+
+                return true;
             }
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        button3.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                //This code runs when the button is clicked
-                //COMMAND: PATTERN 2
-                long[] pattern = {0, 100, 50, 250, 50, 100};
-                vibr.vibrate(pattern, -1);
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    vibr.vibrate(50);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    vibr.vibrate(50);
+                }
+
+                return true;
             }
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
+        button4.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                //This code runs when the button is clicked
-                //COMMAND: PATTERN 3
-                long[] pattern = {0, 100, 50, 250, 50, 100};
-                vibr.vibrate(pattern, -1);
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    vibr.vibrate(100);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    vibr.vibrate(100);
+                }
+
+                return true;
             }
         });
 

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.media.AudioAttributes;
+import android.widget.CheckBox;
 
 public class HCheckBox extends Fragment {
     /**
@@ -47,7 +48,7 @@ public class HCheckBox extends Fragment {
         //Create checkboxes
         Button checkbox1 = rootView.findViewById(R.id.checkbox1);
         Button checkbox2 = rootView.findViewById(R.id.checkbox2);
-        Button checkbox3 = rootView.findViewById(R.id.checkbox3);
+        final Button checkbox3 = rootView.findViewById(R.id.checkbox3);
         Button checkbox4 = rootView.findViewById(R.id.checkbox4);
 
         checkbox1.setOnClickListener(new View.OnClickListener() {
@@ -69,16 +70,22 @@ public class HCheckBox extends Fragment {
             @Override
             public void onClick(View view) {
                 //This code runs when the third checkbox is clicked
-                long[] pattern = {0, 100};
-                vibr.vibrate(pattern, -1);
+                if(((CheckBox)view).isChecked()){ //deselect
+                    vibr.vibrate(50);
+                } else {
+                    vibr.vibrate(10);
+                }
             }
         });
         checkbox4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //This code runs when the fourth checkbox is clicked
-                long[] pattern = {0, 100};
-                vibr.vibrate(pattern, -1);
+                //This code runs when the third checkbox is clicked
+                if(((CheckBox)view).isChecked()){ //deselect
+                    vibr.vibrate(10);
+                } else {
+                    vibr.vibrate(50);
+                }
             }
         });
 

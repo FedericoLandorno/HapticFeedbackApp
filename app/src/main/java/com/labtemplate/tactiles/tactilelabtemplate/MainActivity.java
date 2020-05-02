@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     return end.newInstance(position + 1);
             }
 
+
             return hSlider.newInstance(position + 1);
         }
 

@@ -9,47 +9,48 @@
         \n\nWhen you feel ready, swipe from right to left to start.
     </string>
     <string name="button_section">
-        This is the button section that shows 4 buttons with different vibration patterns.\n
-        The first button gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the \"button 1\" and answer the questions related to it.\n
-        Then, move to \"button 2\" and so on until \"button 4\".\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
+        This is the button section that shows 4 buttons with different vibration patterns.
+        \nThe first button gives no feedback and it is not part of the survey.
+        \n\nWhen you feel ready, start to interact with the \"button 1\" and answer the questions related to it.
+        \nThen, move to \"button 2\" and so on until \"button 4\".
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
     </string>
     <string name="slider_section">
-        This is the slider section that shows 4 sliders with different vibration patterns.\n
-        The first slider gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the first slider and answer the questions related to it.\n
-        Then, move to the second one and so on until the last one.\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
+        This is the slider section that shows 4 sliders with different vibration patterns.
+        \nThe first slider gives no feedback and it is not part of the survey.
+        \n\nWhen you feel ready, start to interact with the first slider and answer the questions related to it.
+        \nThen, move to the second one and so on until the last one.
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
    </string>
     <string name="checkbox_section">
-        This is the checkbox section that shows 4 checkboxes with different vibration patterns.\n
-        The first one gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the first checkbox by selecting and deselecting it
-        and answer the questions related to it.\n
-        Then, move to the second one and so on until the last one.\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
+        This is the checkbox section that shows 4 checkboxes with different vibration patterns.
+        \nThe first one gives no feedback and it is not part of the survey.
+        \n\nWhen you feel ready, start to interact with the first checkbox by selecting and deselecting it
+        and answer the questions related to it.
+        \nThen, move to the second one and so on until the last one.
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
    </string>
     <string name="toggle_section">
-        This is the toggle section that shows 4 toggles with different vibration patterns.\n
-        The first one gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the first toggle by turning it on and off
-        and answer the questions related to it.\n
-        Then, move to the second one and so on until the last one.\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.</string>
+        This is the toggle section that shows 4 toggles with different vibration patterns.
+        \nThe first one gives no feedback and it is not part of the survey.
+        \n\nWhen you feel ready, start to interact with the first toggle by turning it on and off
+        and answer the questions related to it.
+        \nThen, move to the second one and so on until the last one.
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.</string>
     <string name="spinner_section">
-        This is the spinner section that shows 4 spinners with 3 elements each and different vibration patterns.\n
-        The first element of each spinner gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the first spinner by selecting items
-        and answer the questions related to it.\n
-        Then, move to the second one and so on until the last one.\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.</string>
+        This is the spinner section that shows 4 spinners with 3 elements each and different vibration patterns.
+        \nThe first spinner gives no feedback and it is not part of the survey.
+        \nThe already selected elements if selected again give no feedback.
+        \n\nWhen you feel ready, start to interact with the first spinner by selecting items
+        and answer the questions related to it.
+        \nThen, move to the second one and so on until the last one.
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.</string>
     <string name="rating_section">
-        This is the rating section that shows 4 rating bars with different vibration patterns.\n
-        The first one gives no feedback and it is not part of the survey.\n\n
-        When you feel ready, start to interact with the first rating bar and answer the questions related to it.\n
-        Then, move to the second one and so on until the last one.\n
-        When you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
+        This is the rating section that shows 4 rating bars with different vibration patterns.
+        \nThe first one gives no feedback and it is not part of the survey.
+        \n\nWhen you feel ready, start to interact with the first rating bar and answer the questions related to it.
+        \nThen, move to the second one and so on until the last one.
+        \nWhen you have finished to answer the questions related to this section, move to the next page by swiping from right to left.
     </string>
     <string name="end_section">You have done!
     \nRemember to submit the survey!</string>

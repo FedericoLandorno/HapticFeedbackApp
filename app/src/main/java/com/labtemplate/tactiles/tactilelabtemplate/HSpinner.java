@@ -20,6 +20,7 @@ public class HSpinner  extends Fragment {
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
+    static int check = 0;
     Vibrator vibr;
 
     public HSpinner() {
@@ -80,116 +81,44 @@ public class HSpinner  extends Fragment {
         spinner3.setAdapter(adapter3);
         spinner4.setAdapter(adapter4);
 
+
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                long[] pattern = {0,0,0,0,0,0};
-                int i;
-                switch (position) {
-                case 1:
-                    long[] p1 = {0, 100, 50, 250, 50, 100};
-                    for(i=0; i<pattern.length; i++){
-                        pattern[i] = p1[i];
-                    }
-                    break;
-                case 2:
-                    long[] p2 = {0, 200, 150, 50, 50, 100};
-                    for(i=0; i<pattern.length; i++){
-                        pattern[i] = p2[i];
-                    }
-                    break;
-                case 3:
-                    long[] p3 = {0, 100, 150, 50, 50, 100};
-                    for(i=0; i<pattern.length; i++){
-                        pattern[i] = p3[i];
-                    }
-                    break;
-                }
-                vibr.vibrate(pattern, -1);
-            }
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {}
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                long[] pattern = {0,0,0,0,0,0};
-                int i;
-                switch (position) {
-                    case 1:
-                        long[] p1 = {0, 100, 50, 250, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p1[i];
-                        }
-                        break;
-                    case 2:
-                        long[] p2 = {0, 200, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p2[i];
-                        }
-                        break;
-                    case 3:
-                        long[] p3 = {0, 100, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p3[i];
-                        }
-                        break;
+                if(++check>3) {
+                    vibr.vibrate((position+1)*20);
                 }
-                vibr.vibrate(pattern, -1);
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
+
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                long[] pattern = {0,0,0,0,0,0};
-                int i;
-                switch (position) {
-                    case 1:
-                        long[] p1 = {0, 100, 50, 250, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p1[i];
-                        }
-                        break;
-                    case 2:
-                        long[] p2 = {0, 200, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p2[i];
-                        }
-                        break;
-                    case 3:
-                        long[] p3 = {0, 100, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p3[i];
-                        }
-                        break;
+                if(++check>3) {
+                    vibr.vibrate(50);
                 }
-                vibr.vibrate(pattern, -1);
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
         spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                long[] pattern = {0,0,0,0,0,0};
-                int i;
-                switch (position) {
-                    case 1:
-                        long[] p1 = {0, 100, 50, 250, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p1[i];
-                        }
-                        break;
-                    case 2:
-                        long[] p2 = {0, 200, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p2[i];
-                        }
-                        break;
-                    case 3:
-                        long[] p3 = {0, 100, 150, 50, 50, 100};
-                        for(i=0; i<pattern.length; i++){
-                            pattern[i] = p3[i];
-                        }
-                        break;
+                if(++check>3) {
+                    switch (position) {
+                        case 0:
+                            vibr.vibrate(60);
+                            break;
+                        case 1:
+                            vibr.vibrate(40);
+                            break;
+                        case 2:
+                            vibr.vibrate(20);
+                            break;
+                    }
                 }
-                vibr.vibrate(pattern, -1);
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
