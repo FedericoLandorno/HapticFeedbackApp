@@ -68,7 +68,8 @@ public class HSlider extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
                 //This function is called whenever the slider is moved
-                mVibrator.vibrate(progress * 2);
+                long p = (long) (progress * (1.5));
+                mVibrator.vibrate(p);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){
@@ -83,7 +84,7 @@ public class HSlider extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
                 //This function is called whenever the slider is moved
-                mVibrator.vibrate(5);
+                mVibrator.vibrate(4);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){
@@ -98,13 +99,14 @@ public class HSlider extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
                 //This function is called whenever the slider is moved
-                mVibrator.vibrate(2);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){
+                mVibrator.vibrate(4);
             }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar){
+                mVibrator.vibrate(4);
             }
         });
 

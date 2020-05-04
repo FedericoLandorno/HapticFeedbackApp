@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class HSpinner  extends Fragment {
     /**
@@ -59,7 +60,12 @@ public class HSpinner  extends Fragment {
         int j;
         for(j=0; j<spinnerArrays.length; j++){
             for(i=0; i<3; i++){
-                        spinnerArrays[j].add("Spinner "+j+": item"+i);
+                        String lang = Locale.getDefault().getDisplayLanguage();
+                        if(lang.equals("italiano")){
+                            spinnerArrays[j].add("Versione "+(j+1)+": elemento"+(i+1));
+                        } else {
+                            spinnerArrays[j].add("Version "+(j+1)+": item"+(i+1));
+                        }
             }
         }
 
@@ -104,25 +110,16 @@ public class HSpinner  extends Fragment {
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
+
         spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(++check>3) {
-                    switch (position) {
-                        case 0:
-                            vibr.vibrate(60);
-                            break;
-                        case 1:
-                            vibr.vibrate(40);
-                            break;
-                        case 2:
-                            vibr.vibrate(20);
-                            break;
-                    }
+                        long[] pattern = {0, 50, 0, 50};
+                        vibr.vibrate(pattern, -1);
                 }
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-
 
         return rootView;
     }

@@ -63,7 +63,6 @@ public class HButton extends Fragment {
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     vibr.vibrate(10);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    vibr.vibrate(10);
                 }
 
                 return true;
@@ -74,9 +73,9 @@ public class HButton extends Fragment {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    vibr.vibrate(50);
+                    vibr.vibrate(10);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    vibr.vibrate(50);
+                    vibr.vibrate(10);
                 }
 
                 return true;
@@ -87,9 +86,9 @@ public class HButton extends Fragment {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    vibr.vibrate(100);
+                    vibr.vibrate(30);
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    vibr.vibrate(100);
+                    vibr.vibrate(10);
                 }
 
                 return true;

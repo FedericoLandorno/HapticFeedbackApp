@@ -62,8 +62,7 @@ public class HCheckBox extends Fragment {
             @Override
             public void onClick(View view) {
                 //This code runs when the second checkbox is clicked
-                long[] pattern = {0, 100};
-                vibr.vibrate(pattern, -1);
+                vibr.vibrate(10);
             }
         });
         checkbox3.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +70,7 @@ public class HCheckBox extends Fragment {
             public void onClick(View view) {
                 //This code runs when the third checkbox is clicked
                 if(((CheckBox)view).isChecked()){ //deselect
-                    vibr.vibrate(50);
+                    vibr.vibrate(30);
                 } else {
                     vibr.vibrate(10);
                 }
@@ -84,7 +83,7 @@ public class HCheckBox extends Fragment {
                 if(((CheckBox)view).isChecked()){ //deselect
                     vibr.vibrate(10);
                 } else {
-                    vibr.vibrate(50);
+                    vibr.vibrate(30);
                 }
             }
         });

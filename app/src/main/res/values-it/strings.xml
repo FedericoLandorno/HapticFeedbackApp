@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Haptic Feedback Survey App</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="section_format">Ciao mondo dalla sezione: %1$d</string>
+    <string name="v1">Versione 1</string>
+    <string name="v2">Versione 2</string>
+    <string name="v3">Versione 3</string>
+    <string name="v4">Versione 4</string>
+    <string name="home_section">
+        Apri il sondaggio su un altro dispositivo.
+        \n\nLeggi le istruzioni nella prima pagina del sondaggio.
+        \n\nIndossare delle cuffie.
+        \n\nAssicurati di concentrarti sull\'attività senza distrazioni.
+        \n\nQuando ti senti pronta/o, scorri da destra a sinistra per iniziare.
+    </string>
+    <string name="button_section"><b>SEZIONE BUTTON</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> premendola/rilasciandola e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+    </string>
+    <string name="slider_section"><b>SEZIONE SEEK BAR</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> muovendo il cerchio e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+   </string>
+    <string name="checkbox_section"><b>SEZIONE CHECKBOX</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> selezionandola/deselezionandola e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+    </string>
+    <string name="toggle_section"><b>SEZIONE TOGGLE</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> attivandola/disattivandola e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+    </string>
+    <string name="spinner_section"><b>SEZIONE SPINNER</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \nL\'elemento selezionato, se riselezionato, non fornisce feedback.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> selezionando gli elementi e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+    </string>
+    <string name="rating_section"><b>SEZIONE RATING BAR</b>
+        \nLa <i>Versione 1</i> non fornisce feedback e non fa parte del sondaggio.
+        \n\nQuando ti senti pronta/o, inizia a interagire con la <i>Versione 2</i> by cliccandola e rispondendo alle domande ad essa correlate.
+        \nPoi, passa alla <i>Versione 3</i> e quindi alla <i>Versione 4</i>.
+        \nQuando hai finito di rispondere alle domande relative a questa sezione, passa alla pagina successiva scorrendo da destra a sinistra.
+    </string>
+    <string name="end_section">Hai finito!
+    \nRicorda di inviarci il sondaggio!</string>
+    <string name="greetings">Grazie del mio tempo, \nle tue risposte ci saranno utili!</string>
+    <string name="credits">
+        Alessandro Iop 〉 aiop@kth.se
+        \nFederico Landorno 〉 landorno@kth.se
+        \nDH2670 Haptics, Tactile and Tangible Interaction
+        \nInteractive Media Technology
+        \nKTH, Stoccolma, Svezia
+    </string>
+
+</resources>
