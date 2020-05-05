@@ -7,10 +7,17 @@
     <string name="v3">Version 3</string>
     <string name="v4">Version 4</string>
     <string name="home_section">
-        Open the survey on another device.\n\nRead the instructions on the first page of the survey.
-        \n\nWear headphones.
-        \n\nMake sure to be concentrated on the task without distractions.
-        \n\nWhen you feel ready, swipe from right to left to start.
+        Hi! Thank you for your participation to this project.
+        \nYou will be interacting with six (6) different Android© widgets, presented each in four (4)
+        distinct versions, to which haptic feedback has been added.
+        At the same time you will be evaluating them in the corresponding pages of the online survey
+        provided by the authors. Please, keep it open at all times, until you have interacted with the last widget.
+        \n\nMake sure to avoid any possible distractions while doing through the application; we highly
+        suggest you wear headphones and play some music, in order to not be biased by the noise
+        produced by the smartphone\'s vibrations.
+        \n\nMore instructions are presented in the first page of the online survey.
+        Whenever you are ready, scroll the page from right to left to begin.
+        Remember: there is no time limit on the trial, so do not rush your answers!
     </string>
     <string name="button_section"><b>BUTTON SECTION</b>
         \nThe <i>version 1</i> gives no feedback and it is not part of the survey.
@@ -51,7 +58,7 @@
     </string>
     <string name="end_section">You have done!
     \nRemember to submit the survey!</string>
-    <string name="greetings">Thank you very much for you time, \nyour answers will be helpful!</string>
+    <string name="greetings">Thank you very much for your time, \nyour answers will be helpful!</string>
     <string name="credits">
         Alessandro Iop 〉 aiop@kth.se
         \nFederico Landorno 〉 landorno@kth.se

@@ -114,7 +114,7 @@ public class HSpinner  extends Fragment {
         spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(++check>3) {
-                        long[] pattern = {0, 50, 0, 50};
+                        long[] pattern = {0, 50, 50, 50};
                         vibr.vibrate(pattern, -1);
                 }
             }
